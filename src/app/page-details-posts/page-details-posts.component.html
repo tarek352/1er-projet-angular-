@@ -1,0 +1,41 @@
+<!-- <ul> 
+        <li *ngFor="let dts of dt"> 
+            <p>{{dts.id}}</p>
+            <p>{{dts.name}}</p>
+            <p>{{dts.email}}</p>
+            <p>{{dts.body}}</p>
+
+        </li>
+</ul> -->
+<div class="row">
+        <div class="col-md-4 mx-auto my-5" *ngFor="let dts of dt">
+          <mdb-card dark="true">
+            <div class="view overlay waves-light" mdbWavesEffect>
+              <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg"></mdb-card-img>
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <mdb-card-body class="elegant-color white-text">
+              <a class="activator px-3 mr-2">
+                <!-- <mdb-icon fas icon="share-alt" class="white-text"></mdb-icon> -->
+              </a>
+              <mdb-card-title>
+              <p> <span style="font-weight: bold;">id :</span> {{dts.id}} </p>
+              <p> <span style="font-weight: bold;">name : </span> {{dts.name}}</p>
+                <p> <span style="font-weight: bold;">email :</span> {{dts.email}} </p>
+              </mdb-card-title>
+      
+              <hr class="hr-light">
+    
+              <mdb-card-text class="white-text">
+               <h4>{{dts.body}}</h4>
+              </mdb-card-text>
+    
+            </mdb-card-body>
+            <!--/.Card content-->
+          </mdb-card>
+          <!--/.Card-->
+        </div>
+      </div>
+      

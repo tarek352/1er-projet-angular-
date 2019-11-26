@@ -1,0 +1,14 @@
+<!-- <h1 class="text-center">posts works!</h1> -->
+<h1 class="text-center"><mdb-badge color="red">Les Posts</mdb-badge>
+</h1>
+<ul *ngIf="posts"> 
+        <li *ngFor="let post of posts"> 
+                <p class="num">  <span>Post N°</span> {{post.id}}</p> 
+            <p class="name" style="text-decoration: underline;">{{post.title}}</p> 
+            <p class="username">{{post.body}}</p> 
+            <!-- <button class="btn blue-gradient">Détails</button>  -->
+            <button routerLink="{{post.id}}" mdbBtn type="button" gradient="peach" rounded="true" mdbWavesEffect>Détails</button>       
+            <router-outlet></router-outlet>
+        </li>
+
+    </ul>

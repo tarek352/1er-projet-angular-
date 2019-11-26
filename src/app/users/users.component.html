@@ -1,0 +1,17 @@
+<!-- <h1 class="text-center">Users</h1>  -->
+<h1 class="text-center"><mdb-badge color="indigo">la Liste des USERS</mdb-badge>
+</h1>
+<ul *ngIf="users"> 
+    <li *ngFor="let user of users"> 
+        <p class=""><span style="font-weight: bold;"> Name: </span>{{user.name}}</p> 
+        <p class="username"><span style="font-weight: bold;">Username: </span>{{user.username}}</p> 
+        <p class="email"> <span style="font-weight: bold;"> E-mail: </span> {{user.email}}</p> 
+        <p class="adress">  <span style="font-weight: bold;"> Adresse: </span> <br> 
+      street: {{user.address.street}}</p> 
+      <p class="adress">  city: {{user.address.city}}</p> 
+     <!-- <button routerLink="{{user.id}}" class="btn btn-primary btn-rounded waves-effect">Détails</button> -->
+     <button routerLink="{{user.id}}" mdbBtn type="button" gradient="purple" rounded="true" mdbWavesEffect>Détails</button>
+
+     <router-outlet></router-outlet>
+    </li>
+</ul>
